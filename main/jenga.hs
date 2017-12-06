@@ -49,6 +49,7 @@ cabalFileP = CabalFilePath <$> strOption
   <> long "cabal"
   <> metavar "INPUT_CABAL_FILE"
   <> help "The input cabal file."
+  <> action "file"
   )
 
 stackYamlFileP :: Parser StackFilePath
@@ -57,6 +58,7 @@ stackYamlFileP = StackFilePath <$> strOption
   <> long "stack"
   <> metavar "INPUT_STACK_YAML_FILE"
   <> help "The input stack.yaml file."
+  <> action "file"
   )
 
 outputFormatP :: Parser OutputFormat
